@@ -1,0 +1,11 @@
+let ville = "Marseille" ;
+
+if(ville == "Paris"){
+    console.log("vous habitez à Paris") ;
+} else if(ville == "Boulogne" || ville == "Clamart" || ville == "Montrouge"){
+     console.log("vous habitez dans le 92") ;
+} else if(ville == "Saint-Denis" || ville == "Aubervilliers" || ville == "Pantin"){
+    console.log("vous habitez dans le 93") ;
+} else {
+    console.log("vous habitez hors d'Ile de France") ;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        2 >= 2
+        "a" == "ab"
+        2 != 3 && 10 < 33	
+        2 ==  "2"
+        2 === "2"
+        (2 != 5 && 3 > 4 ) || 2 <= 14
+        2 != 5 && ( 3 > 4  || 2 <= 14 )
+        2 != 5 && 3 > 4  || 2 <= 14
+        */
+
+        let a = 2 >= 2 ;
+        //     true 
+
+        let b = "a" == "ab";
+        //        false 
+
+        let c = 2 != 3 && 10 < 33 ;
+        //       true  &&  true
+        //           true 
+
+        let d = 2 ==  "2"  ;
+        //      2 == 2 
+        //         true
+
+        let e = 2 === "2";
+        //       false 
+
+        let f = (2 != 5 && 3 > 4 ) || 2 <= 14 ;
+        //      (  true &&  false ) || true 
+        //             false        || true
+        //                  true 
+
+        let g = 2 != 5 && ( 3 > 4  || 2 <= 14 )
+
+        //      true   &&  (  false || true  )
+        //      true   &&   true 
+        //           true 
+
+        let i = 2 != 5 && 3 > 4  || 2 <= 14
+        //       true  &&  false || true 
+        //          false        || true 
+        //               true 
+
+
+    </script>
+</body>
+</html>

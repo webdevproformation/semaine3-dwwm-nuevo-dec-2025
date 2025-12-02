@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function traitement(){
+            let a = 10 ;
+            let b = 30 ;
+            console.log(a + b);
+        }
+        function traitement2(){
+            let a = 11 ;
+            let b = 12 ;
+            console.log(a + b);
+        }
+        function traitement3(){
+            let a = 15 ;
+            let b = 33 ;
+            console.log(a + b);
+        }
+
+        // paramètre de fonction 
+
+        function traitement4(a, b){ 
+            // a et b sont des  paramètres de la fonction  
+            // variables vides
+            console.log(a + b);
+        }
+
+        traitement4(22,44); // au moment de l'exécution a = 22 et b = 44
+        traitement4(5,13);  // a = 5 et b = 13 
+
+
+        // le return 
+
+
+        function calcul(chiffre1 , chiffre2){
+
+            let resultat = chiffre1 / chiffre2 ;
+            //console.log(resultat) ; 
+            return resultat ; // mot clé qui permet de récupérer la valeur stockée dans la variable resultat 
+        }
+
+        let r =  calcul(30, 80); 
+
+        console.log(r); 
+
+    </script>
+</body>
+</html>
+<!--
+créer le fichier 10-exo.html
+
+1/ déclarer une fonction aireCercle 
+
+2/ cette fonction dispose d'un paramètre rayon
+
+3/ cette fonction dispose de deux instructions :
+- déclarer la variable resultat = 3,14 * rayon * rayon
+- afficher dans la console la phrase suivante :
+l'aire d'un cercle de rayon rayon a une aire de resultat
+
+4/ exécuter la fonction aireCercle pour le rayon
+44,5
+70,43
+
+-->

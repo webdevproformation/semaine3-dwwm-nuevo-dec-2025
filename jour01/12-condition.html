@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // conditions 
+
+        // if est mot clé du langage javascript 
+        // mot qui a un sens particulier pour la langage
+        // let => créer une variable
+        // true => etat 
+
+        // if( comparaison ){ }
+
+        if ( 10 > 5 ) {
+            // true 
+            // faire des choses // addition // concaténation ...
+            let a = 2 ;
+            let b = 10 ;
+            let c = a + b ; 
+
+        }
+
+        if( "hello"  == "bonjour") {
+            // false 
+            // vue que la condition est fausse les traitements qui sont mis dans les acolades
+            // sont ignorés 
+        }
+
+        let age = 10 ; 
+
+        if( age > 18 ){
+            // 10 > 18
+            // false 
+            console.log("bonjour vous êtes majeur");
+        }
+
+
+        let email = "toto@yahoo.fr";
+
+        if(email == "titi@yahoo.fr"){
+            console.log("bonjour titi vous êtes connecté"); 
+        }
+
+        // 
+
+        let fleur = "jasmin";
+
+        if(fleur == "jasmin"){
+            // false 
+            console.log("le prix des jasmins est de 10 euros");
+        } else { // sinon 
+            console.log("la fleur proposée a un prix inconnu"); 
+        }
+
+
+        let prix = 30 ;
+
+        if (prix < 10){
+            //  30 < 10 
+            // false 
+            console.log("le produit coûte moins de 10 euros") ;
+        } else if(prix < 30){
+            // 30< 10 
+            // false 
+            console.log("le produit coûte moins de 30 euros") ;
+        } else if( prix < 100){ 
+            // 30 < 100 
+            // true 
+            console.log("le produit coûte moins de 100 euros") ;
+        } else {
+            console.log("le produit coûte supérieur ou égal à 100 euros") ;
+        }
+
+    </script>
+</body>
+</html>
+
+<!-- 
+créer le fichier 13-exo.html
+
+// créer une variable age
+// initialiser la variable age = 30
+
+// si l'age est compris entre 0 et 10
+// alors afficher dans la console vous êtes un enfant
+
+// si l'age est compris entre 10 inclu et 18
+// alors afficher dans la console vous êtes un ado
+
+// si l'age est supérieur ou égal à 18 et inférieur ou égal à 120
+//  alors afficher dans la console vous êtes un adulte
+
+// sinon
+// afficher dans la console  "l'age mentionné n'est pas conforme"
+-->

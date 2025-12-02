@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 
+
+        let age = 45 ;
+
+        // est ce que la personne a un age entre 10 et 30 ans 
+
+        // && ET AND 
+        // permet d'effectuer un traitement sur les deux comparaisons 
+
+        let verification = age > 10 && age < 30 ; 
+
+        //                 18 > 10 &&  18 < 30
+        //                   true  &&    true
+        //                    true 
+
+        //                 45 > 10 &&  45 < 30
+        //                 true    &&  false
+        //                        false  
+
+        let verification2 = age > 18 
+
+
+        let budget = 5000 ;
+        let prix_tv = 7000 ; 
+
+        let est_ce_que_je_peux_acheter = budget > prix_tv ; 
+        //                                5000  > 7000
+        //                                false 
+
+        // && AND
+
+        // || OR OU 
+
+        // exemple
+
+        let cp = 75 ;
+
+        // si la personne habite soit dans une ville qui a le code postal 75
+        // si la personne habite dans une ville qui la code postal 92
+
+        // Alors la personne habite en ile de France 
+
+        let habite_idf = cp == 75 || cp == 92 ;
+        //               75 == 75 || 75 == 92
+        //                 true   ||   false 
+        //                        true 
+    </script>
+</body>
+</html>
+<!-- 
+créer le fichier 09-exo.html
+
+dans ce fichier vous allez écrire une balise <script>
+dans cette balise script 
+
+comparaison 
+
+2 >= 2
+"a" == "ab"
+2 != 3 && 10 < 33	
+2 ==  "2"
+2 === "2"
+(2 != 5 && 3 > 4 ) || 2 <= 14
+2 != 5 && ( 3 > 4  || 2 <= 14 )
+2 != 5 && 3 > 4  || 2 <= 14
+
+// let a = 10 * 5 + 5 ; 
+//           50   + 5
+//              55
+
+
+// let a = 10 * (5 + 5) ;
+//          10 * (10) ;
+//             100 ;
+-->
