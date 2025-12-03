@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // objet et methode
+
+
+        let voiture = {
+            marque : "Renault",    // propriété de l'objet
+            prix : 4000 ,
+            controle_technique : true ,
+            rouler : function(){   // méthode de l'objet 
+                                   // (propriété qui stocke une fonction )
+                console.log("le vehicule roule"); 
+            }
+        }
+
+        voiture.rouler(); // exécuter la méthode 
+
+        let carre = {
+            cote : 5 ,
+            surface : function(){
+                let resultat = this.cote * this.cote ;
+                console.log(resultat);
+            },
+            perimetre : function(){
+                let resultat = this.cote * 4 ;
+                console.log(resultat);
+            }
+        }
+
+        carre.surface();
+
+        carre.perimetre(); 
+
+    </script>
+</body>
+</html>
+<!-- 
+créer le fichier 10-exo.html
+dans ce fichier vous devez créer un objet qui s'appelle cercle
+
+cet objet possède une propriété rayon qui contient le chiffre 30
+
+cet objet possèce deux méthodes 
+
+surface 
+    contient les traitements suivants 
+    une variable total = la valeur du rayon x 3.14 x rayon
+    logger le resultat
+
+perimetre
+    contient les traitement suivants 
+    une variable total =  2 x 3.14 x rayon 
+    logger le resultat
+
+une fois l'objet créé exécuter les deux méthodes 
+-->

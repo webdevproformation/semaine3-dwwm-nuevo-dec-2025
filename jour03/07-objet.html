@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dernier type de valeur que l'on peut stocker dans une variable
+        // objet 
+
+        let voiture = {
+            marque : "Peugeot",
+            prix : 5000
+        } ;
+
+        let voiture2 = { marque : "VW", prix : 6000 } ;
+
+        voiture.prix ; // 5000
+        voiture.marque ; // "Peugeot"
+
+        // j'ai acheté une Peugeot à 5000 euros
+
+        let phrase = "J'ai acheté une " + voiture.marque + " à " + voiture.prix + " euros" ; 
+
+        console.log(phrase);
+
+    </script>
+</body>
+</html>
+
+<!-- 
+cas pratique
+créer le fichier 08-exo.html
+dans ce fichier vous allez créer un objet qui s'appelle exo
+
+cet objet possède les 4 clé / valeurs suivantes 
+
+duree = 20
+unite = minutes
+sujet = javascript
+note = 5
+
+à partir de cet objet vous devez créer les phrases suivantes
+
+je suis une formation en javascript
+
+je dois faire une exo qui dure 20 minutes qui est noté sur 5 points
+
+-->

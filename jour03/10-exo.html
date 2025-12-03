@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let cercle = {
+            rayon : 30 ,
+            pi : 3.14 ,
+            surface : function(){
+                let total = this.rayon ** 2 * this.pi ;
+                console.log(total);
+            }, 
+            perimetre : function(){
+                let total = this.rayon * 2 * this.pi ;
+                console.log(total);
+            }
+        }
+
+        cercle.surface();   // 2826
+        cercle.perimetre(); // 188.4
+
+    </script>
+</body>
+</html>
