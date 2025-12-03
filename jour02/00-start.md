@@ -38,5 +38,6 @@ HALLBAS2023
 
 # notes de cours 
 
-<https://github.com/webdevproformation/semaine1-dwwm-nuevo>
-<https://github.com/webdevproformation/semaine2-dwwm-nuevo-nov-2025>
+- <https://github.com/webdevproformation/semaine1-dwwm-nuevo>
+- <https://github.com/webdevproformation/semaine2-dwwm-nuevo-nov-2025>
+- <https://github.com/webdevproformation/semaine3-dwwm-nuevo-dec-2025>

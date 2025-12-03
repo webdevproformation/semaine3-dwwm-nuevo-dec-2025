@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculTVA(prixHT , pays)
+        {
+            if(pays == "FR"){
+                let resultat = prixHT * 1.2 ;
+                return resultat
+            }else if(pays == "ES"){
+                return prixHT * 1.5 ;
+            }else{
+                return "pays inconnu" ;
+            }
+        }
+        let prix1 = calculTVA(10,"FR") + calculTVA(30, 'FR');
+        let exo2 = calculTVA(30,"ES");
+        let exo3 = calculTVA(20,"UK");
+        console.log(prix1, exo2, exo3);
+
+
+    </script>
+</body>
+</html>
