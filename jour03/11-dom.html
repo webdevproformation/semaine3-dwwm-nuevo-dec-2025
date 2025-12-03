@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        // document 
+        // mot clé du langage javascript
+        // créer automatiquement par javascript
+        // objet 
+        // document = {
+        //  p : [ p1, p2, p3 ]
+        // }
+
+        let p = document.querySelectorAll("p") ;
+        console.log(p); // p tableau qui contient l'ensemble des balises p dans la page web  
+
+        // remplir le texte "bonjour" le 1er p de la page
+
+        p[0].innerText = "bonjour" ; 
+
+        // remplir le 2eme p de la page avec le texte "salut"
+        p[1].innerText = "salut" ;
+
+        // remplir le 3ème et dernier p de la page avec le texte conclusion
+        p[2].innerText = "Conclusion" ; 
+
+    </script>
+</body>
+</html>
+
+<!-- 
+créer une nouvelle page 12-exo.html
+dans cette page 
+vous allez mettre une balise h1 vide
+3 p vides
+h1 vide
+2 p vides
+lancer une script javascript
+
+remplir le 1er h1 avec le texte "Exo 1"
+remplir les 3 premier p avec le texte "bonjour"
+remplir le 2ème h1 avec le texte "Conclusion"
+remplir les deux derniers p avec le texte "fin" 
+
+-->

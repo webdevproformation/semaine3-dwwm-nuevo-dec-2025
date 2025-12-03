@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+
+        let courses = ["pomme" , "poire" , "banane" , "fraise"] ;
+
+        let ul = document.querySelector("ul") ; 
+        
+        let contenu_ul = "";
+        for(let i = 0 ; i < courses.length ; i = i + 1)
+        {
+            contenu_ul += "<li>" + courses[i] + "</li>";
+        }
+        ul.innerHTML = contenu_ul ;
+
+
+    </script>
+</body>
+</html>

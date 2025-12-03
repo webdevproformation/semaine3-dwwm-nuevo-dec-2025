@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <script>
+        let p = document.querySelectorAll("p")
+
+        // dans le 1er p "bonjour <br> comment vas tu ??"
+
+        p[0].innerText = "bonjour <br> comment vas tu ??" ;  
+
+        p[1].innerHTML = "bonjour <br> comment vas tu ??" ;  // si dans la string il y a une balise html elle est exécutée
+    </script>
+</body>
+</html>
