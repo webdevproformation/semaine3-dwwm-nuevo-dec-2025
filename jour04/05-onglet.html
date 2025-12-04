@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-index="0">Actualités</button>
+    <button data-index="1">Mon CV</button>
+    <button data-index="2">Me Contacter</button>
+    <div>
+        <ul>
+            <li>je découvre le JS</li>
+            <li>création d'une page dynamique</li>
+        </ul>
+    </div>
+    <div>
+        <h1>Mon CV</h1>
+        <p>Je suis un développeur spécialisé en html, css et javascript</p>
+    </div>
+    <div>
+        <h1>Me Contacter</h1>
+        <form action="">
+            <input type="text" placeholder="votre@email.fr">
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+    <script>
+        let button = document.querySelectorAll("button");
+        let div    = document.querySelectorAll("div") ; 
+
+        // masquer toutes les div sauf la 1ère
+        for(let i = 1 ; i < div.length ; i = i + 1){
+            div[i].style["display"] = "none"; 
+        }
+
+        // sur chaque bouton 
+        // si je clique sur le 1er bouton je veux afficher la 1ère div et masquer les autres
+        // si je clique sur le 2ème bouton je veux afficher la 2ème div et masquer les autres
+        // si je clique sur le 3ème bouton je veux afficher la 3ème div et masquer les autres
+
+        function animation( e ) 
+        // paramètre qui permet d'avoir des informations sur la balise sur laquelle je suis en train de travailler
+        {
+            let index = e.target.dataset.index ; // sur quel bouton je clique ??? 
+            console.log(index); 
+            for(let i = 0 ; i < div.length ; i = i + 1){
+                if(index == i){
+                    div[i].style["display"] = "block";
+                }else{
+                    div[i].style["display"] = "none";
+                }
+            }
+        }
+
+        for(let i = 0 ; i < button.length ; i = i + 1){
+            button[i].addEventListener("click" , animation);
+        }
+
+    </script>
+</body>
+</html>
