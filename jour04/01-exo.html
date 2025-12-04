@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h2></h2>
+    <p></p>
+    <p></p>
+    <script>
+        let h1 = document.querySelector("h1");
+        let p  = document.querySelectorAll("p") ;
+        let h2 = document.querySelector("h2") ; 
+
+        function mise_en_forme_first_p( p ){
+            p.innerText = "lorem";
+            p.style["font-size"] = "40px";
+            p.style["color"] = "pink" ;
+        }
+
+        function mise_en_forme_last_p( p ){
+            p.innerHTML = "bonjour <br> comment allez vous ???";
+        }
+
+        h1.innerText = "Start";
+        h1.style["color"]= "green";
+
+        h2.innerText = "Conclusion" ;
+
+        for(let i = 0 ; i < p.length ; i = i + 1){
+            if(i <= 2){
+                mise_en_forme_first_p( p[i] );
+            } else {
+                 mise_en_forme_last_p( p[i] ) ; 
+            }
+        }
+
+    </script>
+</body>
+</html>

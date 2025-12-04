@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h2></h2>
+    <p></p>
+    <p></p>
+    <script>
+
+        let exo = {
+            h1 : document.querySelector("h1") ,
+            p : document.querySelectorAll("p") ,
+            h2 : document.querySelector("h2") ,
+            init : function(){ // start
+                // styliser le h1
+                this.h1.innerText = "Start";
+                this.h1.style["color"]= "green";
+
+                // styliser le h2
+                this.h2.innerText = "Conclusion" ;
+
+                // styliser les p 
+                for(let i = 0 ; i < this.p.length ; i = i + 1){
+                    let current_p = this.p[i] ; 
+                    if(i <= 2){
+                        this.mise_en_forme_first_p( current_p );
+                    } else {
+                        this.mise_en_forme_last_p( current_p ) ; 
+                    }
+                }
+            },
+            mise_en_forme_first_p : function(p){
+                p.innerText = "lorem";
+                p.style["font-size"] = "40px";
+                p.style["color"] = "pink" ;
+            },
+            mise_en_forme_last_p : function(p){
+                p.innerHTML = "bonjour <br> comment allez vous ???";
+            },
+            
+        }
+
+
+        exo.init(); // lance le projet 
+       
+
+    </script>
+</body>
+</html>
