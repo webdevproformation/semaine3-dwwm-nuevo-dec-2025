@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>stop</button>
+    <button>start</button>
+    <script>
+        let button = document.querySelectorAll("button");
+        let i = 0 ;
+        let started = true ;
+        function traitement()
+        {
+            console.log("bonjour" + i);
+            i = i + 1;  
+        }
+        // fonction permet d'exécuter la fonction traitement toutes les 1000 millisecondes (toutes les secondes) à l'infini 
+        let interval = setInterval( traitement  ,  1000  );
+        function stop ()
+        {
+            clearInterval(interval); 
+            started = false ;
+        }
+        button[0].addEventListener("click" , stop)
+        function start()
+        {
+            if(started == false){
+                interval = setInterval(traitement , 1000); 
+                started = true ; 
+            }
+        }
+        button[1].addEventListener("click", start) ;
+    </script>
+</body>
+</html>
