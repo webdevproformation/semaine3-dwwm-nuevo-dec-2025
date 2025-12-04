@@ -9,6 +9,7 @@
     <button data-index="0">Actualités</button>
     <button data-index="1">Mon CV</button>
     <button data-index="2">Me Contacter</button>
+    <button data-index="3">code</button>
     <div>
         <ul>
             <li>je découvre le JS</li>
@@ -25,6 +26,39 @@
             <input type="text" placeholder="votre@email.fr">
             <input type="submit" value="Envoyer">
         </form>
+    </div>
+    <div>
+        <pre>
+
+{
+  "name": "projet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "IE 10"
+  ]
+}
+
+        </pre>
+
     </div>
     <script>
         let button = document.querySelectorAll("button");
@@ -45,6 +79,7 @@
         {
             let index = e.target.dataset.index ; // sur quel bouton je clique ??? 
             console.log(index); 
+
             for(let i = 0 ; i < div.length ; i = i + 1){
                 if(index == i){
                     div[i].style["display"] = "block";
@@ -58,6 +93,39 @@
             button[i].addEventListener("click" , animation);
         }
 
+
+        /* let p = document.querySelector("p")
+
+        p.innerText 
+        p.innerHTML 
+        p.style 
+        p.addEventListener()
+        p.dataset  */
+
+        
     </script>
+    <img src="https://placehold.co/200" alt="">
+    <img src="" alt="">
 </body>
 </html>
+
+<!--
+
+cas pratique
+
+créer le fichier 06-exo.html
+dans cette page vous avez 
+2 boutons
+    bouton mon CV
+    bouton mes photos
+
+2 div
+    1ère div vous avez un h1 et p qui contiennent du texte de votre choix
+
+    2ème div vous avez deux balises images qui contiennent une image de votre choix
+
+en javascript vous allez créer un système d'onglet 
+    
+
+
+-->
