@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Action</button>
+    <div>Bonjour</div>
+    <script>
+
+        // lorsque je clique sur le bouton 
+        // je veux faire disparaitre la div dans la page 
+
+        // let a = 10 ;
+        // var b = 12 ;
+
+        let button = document.querySelector("button"); // = {}
+
+        // associer au bouton que je viens de sélectionner dans le DOM
+        // événement => le fait de cliquer sur le bouton
+        // traitement => faire disparaison la div 
+
+        function faire_disparaitre_div(){
+            let div = document.querySelector("div");
+            //div.style["display"] = "none"; 
+            //div.style["color"] = "blue";
+            //div.style["font-size"] = "40px";
+            let largeur_ecran = window.innerWidth - 65;
+            div.style["transform"] = "translateX("+ largeur_ecran +"px)";
+            div.style["transition"] = "2s" ;
+        }
+
+        button.addEventListener("click" , faire_disparaitre_div)
+
+    </script> 
+</body>
+</html>
+
+<!-- 
+créer le fichier 04-exo.html
+dans la page vous avez deux boutons  avec
+    le 1er Action1
+    le 2eme Action2
+et vous avez 2 p 
+    le premier contient le texte "1er p"
+    le premier contient le texte "2eme p"
+
+avec javascript lorsque vous cliquez sur le 1er bouton => disparaitre le 1er p
+avec javascript lorsque vous cliquer sur le 2ème bouton => changer la couleur du 2ème p en rouge 
+-->

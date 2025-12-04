@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>action1</button>
+    <button>action2</button>
+    <p data-show="true">1er p</p>
+    <p>2ème p</p>
+    <script>
+        let button = document.querySelectorAll("button");
+        let p      = document.querySelectorAll("p");
+
+        function effet_first_p(){
+            let first_p =  p[0]
+            let is_visible = first_p.dataset.show
+            if(is_visible == "true"){
+                first_p.style["display"] = "none";
+                first_p.dataset.show = false ;
+            }else {
+                first_p.style["display"] = "block";
+                first_p.dataset.show = true ; 
+            }
+        }
+
+        button[0].addEventListener("click" , effet_first_p)
+
+
+        function effet_second_p(){
+            p[1].style["color"] = "red";
+        }
+
+        button[1].addEventListener("click" , effet_second_p)
+
+
+    </script>
+</body>
+</html>
