@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .bi-list{
+            font-size: 40px;
+            cursor: pointer;
+        }
+        nav{
+            display: flex;
+            gap : 20px;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            gap : 10px;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <i class="bi bi-list"></i>
+        <ul data-show="true">
+            <li><a href="">Accueil</a></li>
+            <li><a href="">Nous Contacter</a></li>
+            <li><a href="">Admin</a></li>
+        </ul>
+    </nav>
+    <script>
+        let burger = document.querySelector("i");
+        let menu   = document.querySelector("ul"); 
+        function toggle_menu()
+        {
+            let show = menu.dataset.show ;
+            if(show == "true"){
+                menu.style["display"] = "none";
+                menu.dataset.show = false ;
+            } else {
+                menu.style["display"] = "flex";
+                menu.dataset.show = true ;
+            }
+        }
+
+        burger.addEventListener("click" , toggle_menu);
+
+    </script> 
+</body>
+</html>

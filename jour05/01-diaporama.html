@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <script>
+        let diapositives = [
+            "https://placehold.co/400x200?text=diapo1",
+            "https://placehold.co/400x200?text=diapo2",
+            "https://placehold.co/400x200?text=diapo3"
+        ];
+        let current_diapo = 0 ; 
+        let img = document.querySelector("img"); 
+        let interval = null ;
+        // mettre la 1ère image dans l'attribut src de l'image
+        img.src = diapositives[current_diapo]; 
+        function next_diapo()
+        {
+            current_diapo = current_diapo + 1 ;
+            if(current_diapo > diapositives.length -1 ){
+                current_diapo = 0 ; 
+            }
+            img.src = diapositives[current_diapo]; 
+        }   
+        interval = setInterval(  next_diapo ,  2000  );
+
+        // si on passe la souris sur l'image Alors il faut stopper l'animation
+        function stop()
+        {
+            clearInterval(interval);
+        }
+        img.addEventListener( "mouseover" , stop )
+
+        // si on sort la souris de l'image Alors il faut reprendre l'animation
+        function start()
+        {
+            interval = setInterval(  next_diapo ,  2000  );
+        }
+        img.addEventListener("mouseout" , start)
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="03-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <i class="bi bi-list nav-burger"></i>
+                <ul class="nav-menu" data-show="true">
+                    <li><a href="" class="nav-menu-link">Diaporama</a></li>
+                    <li><a href="" class="nav-menu-link">Onglet</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="diaporama">
+                <img src="" alt="" class="diaporama-images">
+            </section>
+            <section class="onglet">
+                <button data-index="0" class="onglet-btn">mon CV</button>
+                <button data-index="1" class="onglet-btn">Portfolio</button>
+                <button data-index="2" class="onglet-btn">Me contacter</button>
+                <div class="onglet-zone">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cumque, dolorem sit optio modi nisi non. Ut iure tenetur nulla eveniet recusandae laborum ipsum itaque asperiores velit totam omnis, nemo voluptas laudantium, qui voluptates obcaecati impedit enim quod aliquid at!</p>
+                </div>
+                <div class="onglet-zone">
+                    <h1>Mon portfolio</h1>
+                    <ul>
+                        <li>Projet 1</li>
+                        <li>Projet 2</li>
+                        <li>Projet 3</li>
+                    </ul>
+                </div>
+                <div class="onglet-zone">
+                    <p>Vous voulez me contacter merci de remplir le formulaire suivant :</p>
+                    <form action="">
+                        <input type="text" placeholder="votre@email.fr">
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        // javascript pour le menu burger
+
+        (function(){
+            let burger = document.querySelector(".nav-burger");
+            let menu   = document.querySelector(".nav-menu") ; 
+            function toggle_menu(){
+                let show = menu.dataset.show ;
+                if(show == "true"){
+                    menu.style["display"] = "none";
+                    menu.dataset.show = false ;
+                } else {
+                    menu.style["display"] = "flex";
+                    menu.dataset.show = true ;
+                }
+            }
+            burger.addEventListener("click", toggle_menu)
+        })();
+    </script>
+    <script>
+        // gestion du diaporama en javascript
+
+        (function(){
+            // d'avoir des vraies images https://lipsum.app/images
+            let diapositives = [
+                "https://lipsum.app/id/24/1600x500",
+                "https://lipsum.app/id/25/1600x500",
+                "https://lipsum.app/id/26/1600x500",
+                "https://lipsum.app/id/27/1600x500",
+            ];
+            let index = 0 ;
+            let image = document.querySelector(".diaporama-images")
+            let interval = null ; 
+            image.style["max-width"] = "100%";
+            image.src= diapositives[index]
+            function animation(){
+                index = index + 1 ;
+                if(index > diapositives.length - 1){
+                    index = 0 ;
+                }
+                image.src= diapositives[index]
+            }
+            function stop(){
+                clearInterval(interval);
+            }
+            function start(){
+                interval = setInterval( animation , 2000 );
+            }
+            start();
+            image.addEventListener("mouseover" , stop);
+            image.addEventListener("mouseout" , start);
+        })();
+
+    </script>
+    <script>
+        // gestion du système d'onglet en javascript
+        (function(){
+            let button = document.querySelectorAll(".onglet-btn") ;
+            let zones  = document.querySelectorAll(".onglet-zone");
+            for(let i = 1 ; i < zones.length ; i = i + 1){
+                zones[i].style["display"] = "none";
+            }
+            function animation_onglet(e)
+            {
+                let index = e.target.dataset.index
+                for(let i = 0 ; i < zones.length ; i = i + 1){
+                    if(i == index){
+                        zones[i].style["display"] = "block";
+                    }else {
+                        zones[i].style["display"] = "none";
+                    }
+                }
+            }
+            for(let i = 0 ; i < button.length ; i = i + 1){
+                button[i].addEventListener("click" , animation_onglet)
+            }
+        })();
+    </script>
+</body>
+</html>

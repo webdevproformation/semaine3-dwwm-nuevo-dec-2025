@@ -1,0 +1,97 @@
+/*  reset remise à zéro deo de la page au niveau des styles  */
+
+body, h1, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    color:unset; 
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* palette de couleurs
+https://flatuicolors.com/
+*/
+
+:root{
+    --primary : #9b59b6 ;
+    --secondary : #2ecc71; 
+}
+
+/* container */
+
+.container{
+    width:1100px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+    color : var(--primary);
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--secondary);
+}
+
+button, input[type="submit"]{
+    border:1px solid var(--secondary);
+    color: var(--secondary);
+    background-color: white;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+button:hover, input[type="submit"]:hover{
+    background-color:var(--secondary);
+    color: white;
+}
+input[type="text"]{
+    border:1px solid var(--secondary);
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+}
+
+/* styliser les élements du header*/
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.nav-burger{
+    font-size: 30px;
+    cursor: pointer;
+    color:var(--secondary)
+}
+
+.nav-menu{
+    display: flex;
+    gap:1em;
+    font-size: 1.2rem;
+}
+.diaporama{
+    margin: 20px 0;
+    padding: 15px;
+    border:1px solid var(--primary);
+    border-radius: 5px;
+}
+.onglet-zone{
+    margin: 20px 0;
+    padding: 15px;
+    border:1px solid var(--secondary);
+    border-radius: 5px;
+}
