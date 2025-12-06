@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-close{
+            position: absolute;
+            right:30px;
+            top : 30px;
+            font-size: 20px;
+            color : white; 
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        .modal-inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .modal-image{
+            animation: zoom 1s;
+        }
+
+        @keyframes zoom {
+            0%{ transform:  scale( 0 ); }
+            100%{ transform:  scale( 1 ); }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://placehold.co/500x200" alt="" class="btn">
+    <div class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-inner">
+            <img src="" alt="" class="modal-image">
+        </div>
+    </div>
+    <script>
+        let btn   = document.querySelector(".btn");
+        let modal = document.querySelector(".modal");
+        let image = document.querySelector(".modal-image");
+        let btn_close = document.querySelector(".modal-close")
+
+
+        btn.style["width"] = "200px";
+
+        function show_modal( e )
+        {
+            modal.style["display"] = "block";
+            image.src = e.target.src
+        }
+        btn.addEventListener("click", show_modal )
+        function hide_modal(){
+            modal.style["display"] = "none";
+        }
+        btn_close.addEventListener("click" , hide_modal);
+
+        function hide_out_image_modal(e)
+        {
+            // hide if click out of zoomed image (sur le fond)
+            if(e.target != image){
+                modal.style["display"] = "none";
+            }
+        }
+
+        modal.addEventListener("click" , hide_out_image_modal);
+    </script>
+</body>
+</html>
